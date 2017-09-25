@@ -80,7 +80,7 @@ Every member of your group should do the examples
 I'm going to ask you to implement a stored procedure that used cursors. Before doing this you will need to choose two dividing values based upon the prices in the prices table.  Choose these values so that they divide your prices into 3 pieces.  A few pieces of advice:
 
 1. All your `DECLARE`'s must occur at the beginning of the procedure
-1. This is a PRIMITIVE language, and you will have to know IN ADVANCE how many columns you are going to be using in your CURSOR and have the same number of variables ready for the values (<https://mariadb.com/kb/en/fetch/ contains the syntax>)
+1. This is a PRIMITIVE language, and you will have to know IN ADVANCE how many columns you are going to be using in your CURSOR and have the same number of variables ready for the values (<https://mariadb.com/kb/en/fetch/> contains the syntax)
 1. Do NOT make your variable names the same as your column names (trust me)
 
 **Note:**  The assumption is that the ids in your `price` table link correctly to the ids in your `inventory` table.  If they don't-- you'll have to fix that.
