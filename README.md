@@ -63,7 +63,7 @@ Start with this link to get a sense of how they work:
 
 <https://mariadb.com/kb/en/cursor-overview/>
 
-When you implement the example (and every member of your group should implement the example in their database), you will need to modify the code to use **your** database.  One extra change.  The sample code uses `p1` twice.  Instead of this, make the second example use a procedure called `p2`.
+When you implement the first example (and every member of your group should implement the example in their database), you will need to modify the code to use **your** database.  We do not have a sufficiently recent version of the mariadDB server to implement the second example... so don't worry about that.
 
 It's possible that you will accidently create an infinite loop so I've enabled our usual power user.  Review this:
 
