@@ -63,7 +63,7 @@ Start with this link to get a sense of how they work:
 
 <https://mariadb.com/kb/en/cursor-overview/>
 
-When you implement the example (and you should DEFINITELY implement the example), you will need to modify the code to use your database.
+When you implement the example (and every member of your group should implement the example in their database), you will need to modify the code to use **your** database.  One extra change.  The sample code uses `p1` twice.  Instead of this, make the second example use a procedure called `p2`.
 
 It's possible that you will accidently create an infinite loop so I've enabled our usual power user.  Review this:
 
@@ -74,6 +74,8 @@ And then this:
 <https://mariadb.com/kb/en/data-manipulation-kill-connection-query/>
 
 You can use the information contained therein to kill any run-away loops you make.
+
+Every member of your group should do the examples 
 
 I'm going to ask you to implement a stored procedure that used cursors. Before doing this you will need to choose two dividing values based upon the prices in the prices table.  Choose these values so that they divide your prices into 3 pieces.  A few pieces of advice:
 
@@ -391,10 +393,12 @@ Here are a few tutorials explicitly on node.js that might help.  Be certain you 
   - [ ] [w3schools tutorial](http://www.w3schools.com/js/)
   - [ ] <http://stackoverflow.com/questions/20819826/how-to-pass-parameters-to-mysql-query-callback-in-nodejs>
   - [ ] <https://blog.engineyard.com/2015/taming-asynchronous-javascript-with-async>
-- [ ] Make extra EVERYBODY in your group types the cursor example in the mariadb cursor overview in the reading list-- your group score for this will be the lowest individual score
+- [ ] Cursor example in the [mariadb cursor overview](https://mariadb.com/kb/en/cursor-overview/) done by all-- group will be lowest individual score
 - [ ] Complete the following exercises:
   - [ ] The [cursor exercise](#cursorEx)
      - [ ] Procedure `mypartition`
      - [ ] Procedure `mypartition2`
      - [ ] Procedure `mypartition3`
   - [ ] The [node exercise](#nodeEx)
+     - [ ] program `showdatabases.js`
+     - [ ] program `summarize-db.js`
