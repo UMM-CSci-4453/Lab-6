@@ -400,5 +400,5 @@ Here are a few tutorials explicitly on node.js that might help.  Be certain you 
      - [ ] Procedure `mypartition2`
      - [ ] Procedure `mypartition3`
   - [ ] The [node exercise](#nodeEx)
-     - [ ] program `showdatabases.js`
+     - [ ] program `showDatabases.js`
      - [ ] program `summarize-db.js`
