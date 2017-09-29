@@ -232,7 +232,7 @@ Let me simplify the code a bit:
 connection=<setup>;
 connection.connect(function(err){...});
 connection.query('SHOW DATABASES',function(err,rows,fields){...});
-connection.end()
+connection.end();
 console.log("All done now.");
 ```
 
