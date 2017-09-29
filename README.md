@@ -176,7 +176,7 @@ var credentials = require('./credentials.json');
 
 var mysql=require("mysql");
 
-credentials.host="ids"
+credentials.host="ids";
 var connection = mysql.createConnection(credentials);
 
 connection.connect(function(err){
