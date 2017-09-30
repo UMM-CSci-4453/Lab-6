@@ -264,108 +264,77 @@ The important thing to realize now is that **node.js is asynchronous**.  And tha
   * Add it to your group's repository
   * Don't forget to include the repository URL when you submit on Canvas.
 
-The output should be of the form 
+The output should be in the following format (I've included an example further below):
 ```
----|DATABASE 1>==
-.....|Name of Table 1>==
+---|DATABASE 1>
+.....|Name of Table 1>
 Description
-.....|Name of Table 2>==
+.....|Name of Table 2>
 Description
 ...
----|DATABASE 2>==
+---|DATABASE 2>
 ...
 ```
 
-My program generated quite a lot of output.  Yours should too.  Here's what the top of my output looks like:
+The `Description` should be in the following format:
+```
+          FieldName: `_fieldname_` (_datatype_)`
+```
+
+My program generated a lot of output (because I used an account that can see every database).  Here's what the top of my output looks like:
 
 ```
----|information_schema>
-.....|information_schema.ALL_PLUGINS>
-[ { Field: 'PLUGIN_NAME',
-    Type: 'varchar(64)',
-    Null: 'NO',
-    Key: '',
-    Default: '',
-    Extra: '' },
-  { Field: 'PLUGIN_VERSION',
-    Type: 'varchar(20)',
-    Null: 'NO',
-    Key: '',
-    Default: '',
-    Extra: '' },
-  { Field: 'PLUGIN_STATUS',
-    Type: 'varchar(16)',
-    Null: 'NO',
-    Key: '',
-    Default: '',
-    Extra: '' },
-  { Field: 'PLUGIN_TYPE',
-    Type: 'varchar(80)',
-    Null: 'NO',
-    Key: '',
-    Default: '',
-    Extra: '' },
-  { Field: 'PLUGIN_TYPE_VERSION',
-    Type: 'varchar(20)',
-    Null: 'NO',
-    Key: '',
-    Default: '',
-    Extra: '' },
-  { Field: 'PLUGIN_LIBRARY',
-    Type: 'varchar(64)',
-    Null: 'YES',
-    Key: '',
-    Default: null,
-    Extra: '' },
-  { Field: 'PLUGIN_LIBRARY_VERSION',
-    Type: 'varchar(20)',
-    Null: 'YES',
-    Key: '',
-    Default: null,
-    Extra: '' },
-  { Field: 'PLUGIN_AUTHOR',
-    Type: 'varchar(64)',
-    Null: 'YES',
-    Key: '',
-    Default: null,
-    Extra: '' },
-  { Field: 'PLUGIN_DESCRIPTION',
-    Type: 'longtext',
-    Null: 'YES',
-    Key: '',
-    Default: null,
-    Extra: '' },
-  { Field: 'PLUGIN_LICENSE',
-    Type: 'varchar(80)',
-    Null: 'NO',
-    Key: '',
-    Default: '',
-    Extra: '' },
-  { Field: 'LOAD_OPTION',
-    Type: 'varchar(64)',
-    Null: 'NO',
-    Key: '',
-    Default: '',
-    Extra: '' },
-  { Field: 'PLUGIN_MATURITY',
-    Type: 'varchar(12)',
-    Null: 'NO',
-    Key: '',
-    Default: '',
-    Extra: '' },
-  { Field: 'PLUGIN_AUTH_VERSION',
-    Type: 'varchar(80)',
-    Null: 'YES',
-    Key: '',
-    Default: null,
-    Extra: '' } ]
+Connected to Database.
+        Acquiring data.  This may take a bit...
+---|Andy>
+......|Andy.Table_A>
+        FieldName: `id`         (int(2))
+        FieldName: `name`       (text)
+......|Andy.Table_B>
+        FieldName: `id`         (int(2))
+        FieldName: `name`       (text)
+......|Andy.fk_A>
+        FieldName: `idA`        (int(11))
+        FieldName: `foreignId`  (int(11))
+......|Andy.fk_B>
+        FieldName: `idB`        (int(11))
+        FieldName: `text`       (text)
+......|Andy.inventory>
+        FieldName: `item`       (varchar(255))
+        FieldName: `unit`       (varchar(255))
+        FieldName: `amount`     (int(11))
+        FieldName: `id`         (int(11))
+......|Andy.prices>
+        FieldName: `id`         (int(11))
+        FieldName: `prices`     (decimal(2,0))
+        FieldName: `notes`      (text)
+......|Andy.randA>
+        FieldName: `colA`       (int(11))
+        FieldName: `colB`       (int(11))
+......|Andy.randB>
+        FieldName: `colA`       (int(11))
+        FieldName: `colB`       (int(11))
+......|Andy.test_field_Lau>
+        FieldName: `ColumnUno`  (text)
+......|Andy.testinggg>
+        FieldName: `data`       (text)
+......|Andy.workers>
+        FieldName: `EMPLOYEE`   (text)
+        FieldName: `MANAGER`    (text)
+        FieldName: `JOB`        (text)
+        FieldName: `SALARY`     (decimal(10,2))
+        FieldName: `YEARS_WORKED`       (decimal(3,1))
+---|BBXD>
+......|BBXD.CurrentCharacter>
+        FieldName: `Name`       (text)
+        FieldName: `Class`      (text)
 ```
 
 I have a few words of wisdom for you:  If you are not careful, the value of **variables in asynchronous function calls can change from underneath you**.  I highly recommend extensive use of the `console.log()` function and be sure to read the following:
 
 <http://stackoverflow.com/questions/20819826/how-to-pass-parameters-to-mysql-query-callback-in-nodejs>
 
-You might also find the `async` package helpful:  
+If you get extremely frustrated you might want to look into using packages that use **promises** (we'll talk about that in a later lab).  like `bluebird`.  In the past, many students have found the `async` package helpful:  
 
 <https://blog.engineyard.com/2015/taming-asynchronous-javascript-with-async>
 
@@ -401,4 +370,4 @@ Here are a few tutorials explicitly on node.js that might help.  Be certain you 
      - [ ] Procedure `mypartition3`
   - [ ] The [node exercise](#nodeEx)
      - [ ] program `showDatabases.js`
-     - [ ] program `summarize-db.js`
+     - [ ] program `summarize-db.js` (this will likely take the **most** time... so start early)
