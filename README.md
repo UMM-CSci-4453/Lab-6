@@ -345,7 +345,7 @@ Here are a few tutorials explicitly on node.js that might help.  Be certain you 
 ### Tutorials
 
 * [Friendly Introduction to node](https://blog.codeship.com/node-js-tutorial/)
-* [Introduction to node](https://www.airpair.com/javascript/node-js-tutorial):  You can skip the material on compiling node.js from scratch.
+* [Introduction to node](https://www.airpair.com/javascript/node-js-tutorial):  You can skip the material on compiling node.js from scratch.  You will also need to replace `**filename` with `__filename` and `**dirname` with `__dirname`
 * [Deeper introduction](https://github.com/felixge/node-mysql/):  This will be of more use to you next week.
 * [Nice overview](http://excellencemagentoblog.com/blog/2014/05/04/nodejs-async-programming-callbacks-variable-scopes/)
 
