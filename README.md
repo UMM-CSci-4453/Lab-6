@@ -379,28 +379,27 @@ Many of the node tutorials floating around are based off of 0.8 and we are now a
 ```js
 const http = require('http');
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
+http.createServer(function(req, res){
+  res.writeHead(200,{'Content-Type': 'text/plain'});
   res.end('Hello World\n');
-});
+}).listen(3456);
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+console.log('server running on port 3456');
 ```
 
 If you see the similar (but **different**) definition:
 
 ```js
-const server=http.createServer(function(request,response){
-        request.on("end",function(){
-                response.writeHead(200,{'Content-Type':'text/plain'});
-                response.end('Hello HTTP!');
-        });
+const http = require('http');
+
+http.createServer(function(request,response){
+    request.on("end",function(){
+        response.writeHead(200,{'Content-Type':'text/plain'});
+        response.end('Hello HTTP!');
+    });
+ }).listen(3456);
+
+console.log('server running on port 3456');
 ```
 
 then your tutorial is using an older version of node.
