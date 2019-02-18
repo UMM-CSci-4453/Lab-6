@@ -39,7 +39,7 @@ mysql -u <your name> -p --host=ids [your database] < test.sql
 
 Stored procedures in mariaDB can be more than just a sequence of SQL commands.  There are also much more sophisticated flow control commands
 
-<https://mariadb.com/kb/en/program-control/>
+<https://mariadb.com/kb/en/library/control-flow-functions/>
 
 In addition the... *ahem* (need to change the tone of my voice).  
 In addition the arguments that are passed to a procedure use an antediluvian (look it up) mechanism that was old when the world was young.  
