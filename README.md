@@ -12,17 +12,17 @@ You know how to enter commands by hand.  You can also use the `SOURCE` command
 	
 From the shell (in the same directory from which you will launch the mariadb host), create the file "test.sql".  The contents should be:
 
-```{sql}
+```sql
 SELECT * FROM inventory;
 ```
 
 Now start mariadb and execute this command:
-```{sql}
+```sql
 SOURCE test.sql;
 ```
 
 You can also do the same thing (from the shell) via:
-```
+```sh
 mysql -u <your name> -p --host=ids [your database] < test.sql
 ```
 
